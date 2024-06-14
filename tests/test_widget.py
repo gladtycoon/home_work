@@ -1,5 +1,7 @@
 import pytest
-from src.widget import mask_account_card, get_data
+
+from src.widget import get_data, mask_account_card
+
 
 @pytest.mark.parametrize('number_acc_or_card, expected', [('Счет 73654108430135874305', 'Счет **4305'),
                                                           ('Visa Platinum 7000 7922 8960 6361',
