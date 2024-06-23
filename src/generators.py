@@ -49,14 +49,14 @@ transactions = [
 ]
 
 
-def filter_by_currency(transactions: List[Dict[str, dict[Any, Any]]], type_of_currency: str) -> str:
+def filter_by_currency(transactions: List[Dict[str, dict[Any, Any]]], type_of_currency: str) -> dict:
     """Принимает список словарей с банковскими операциями и возвращает итератор,
-    который выдает по очереди id операций, в которых указана заданная валюта"""
+    который выдает по очереди операции, в которых указана заданная валюта"""
 
-    print("\n*** id операций с выбранной валютой ***")
+    print("\n*** Операции с выбранной валютой ***")
     for transaction in transactions:
         if transaction["operationAmount"]["currency"]["name"] == type_of_currency:
-            yield transaction["id"]
+            yield transaction
 
 
 for usd_transactions in filter_by_currency(transactions, "USD"):
