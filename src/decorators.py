@@ -10,7 +10,7 @@ def log(filename: str | None = None) -> Callable:
         def wrapper(*args: Any, **kwargs: Any) -> Any:
             try:
                 result = func(*args, **kwargs)
-                log_message = "my_function ok\n"
+                log_message = "my_function ok"
             except Exception as e:
                 log_message = f"my_function error: {e}. Inputs: {args}, {kwargs}\n"
             if filename:
@@ -25,11 +25,11 @@ def log(filename: str | None = None) -> Callable:
     return decorator
 
 
-#log(filename="mylog.txt")  # для вывода в файл mylog.txt
+#@log(filename="mylog.txt")  # для вывода в файл mylog.txt
 @log()                        # для печати в консоль
 def my_function(x, y):
     return x + y
 
 
 if __name__ == "__main__":
-    print(my_function(1, 2))
+    print(my_function(1, 0))

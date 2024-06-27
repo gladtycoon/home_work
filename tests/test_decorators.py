@@ -21,4 +21,4 @@ def test_log_3(capsys):  # Перехват сообщения (выполняе
 
     my_function(1, 2)
     captured = capsys.readouterr()
-    assert captured.out == "my_function ok\n\n"
+    assert captured.out == "my_function ok\n"
