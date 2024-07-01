@@ -1,0 +1,9 @@
+my_function error: division by zero. Inputs: (1, 0), {}
+my_function ok
+my_function error: my_function() missing 2 required positional arguments: 'x' and 'y'. Inputs: (), {}
+my_function ok
+my_function ok
+my_function ok
+my_function ok
+my_function error: division by zero. Inputs: (12, 0), {}
+my_function error: division by zero. Inputs: (12, 0), {}
