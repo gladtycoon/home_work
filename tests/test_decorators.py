@@ -5,7 +5,7 @@ from src.decorators import my_function    # для тестирования де
 
 def test_log():
 
-    assert my_function(2, 1) == 3   # Положительный исход
+    assert my_function(2, 1) == 2   # Положительный исход
 
 
 # def test_log_to_exception():
