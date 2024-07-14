@@ -22,8 +22,7 @@ def return_amount_transactions(transactions: Any) -> float:
         response = requests.get(url, headers=headers)
         # status_code = response.status_code
         # print(f'Статус код: {status_code}')
-        return response.json()
-        #return round(response.json()["result"], 2)
+        return float(response.json()["result"])
 
 
 if __name__ == "__main__":
