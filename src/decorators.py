@@ -15,7 +15,7 @@ def log(filename: str | None = None) -> Callable:
             except Exception as e:
                 result = "Error when executing code"
                 log_message = f"my_function error: {e}. Inputs: {args}, {kwargs}\n"
-            #                raise          # для возбуждения исключения (нужно для 2 теста)
+                # raise          # для возбуждения исключения (нужно для 2 теста)
             if filename:
                 with open(filename, "a", encoding="utf-8") as file:
                     file.write(log_message)
@@ -28,7 +28,9 @@ def log(filename: str | None = None) -> Callable:
     return decorator
 
 
-@log(filename="mylog.txt")  # для вывода в файл mylog.txt
+@log(
+    filename="D:/SkyPro/home_work/logs/mylog.txt"
+)  # для вывода в файл mylog.txt (при запуске из терминала - src/mylog.txt)
 def my_function(x, y):
     return x + y
 
@@ -39,4 +41,4 @@ def my_function(x, y):
 
 
 if __name__ == "__main__":
-    print(my_function(2, 2))
+    print(int(my_function(0.5, 0.5)))

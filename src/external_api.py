@@ -4,7 +4,7 @@ from typing import Any
 import requests
 from dotenv import load_dotenv
 
-load_dotenv("../.env")
+load_dotenv("D:/SkyPro/home_work/.env")
 
 
 def return_amount_transactions(transactions: Any) -> float:
@@ -37,4 +37,4 @@ if __name__ == "__main__":
             "to": "Счет 35383033474447895560",
         }
     )
-    print(f"Сумма транзакции равна: \n{result}")
+    print(f"Сумма транзакции равна: {round(result, 2)}")
