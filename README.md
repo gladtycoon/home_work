@@ -33,9 +33,9 @@ git@github.com:gladtycoon/home_work.git
 
 1. Откройте пакет *tests*.
 2. Выполните тесты *test_masks.py*, *test_widget.py*, *test_processing.py*, *test_generators.py*, *test_decorators.py*,
-*test_utils.py*, *test_external_api.py*
+*test_utils.py*, *test_external_api.py*, *test_read_transactions.py*
 
-Покрытие кода тестами согласно **Code coverage** составляет 91%.
+Покрытие кода тестами согласно **Code coverage** составляет 82%.
 
 ## Лицензия:
 
