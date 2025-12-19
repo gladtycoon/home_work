@@ -1,4 +1,4 @@
-from typing import Any, Dict, List
+from typing import Any, Dict, Generator, List
 
 transactions = [
     {
@@ -49,7 +49,7 @@ transactions = [
 ]
 
 
-def filter_by_currency(transactions: List[Dict[str, dict[Any, Any]]], type_of_currency: str) -> dict:
+def filter_by_currency(transactions: List[Dict[str, dict[Any, Any]]], type_of_currency: str) -> Generator:
     """Принимает список словарей с банковскими операциями и возвращает итератор,
     который выдает по очереди операции, в которых указана заданная валюта"""
 
