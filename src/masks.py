@@ -13,18 +13,22 @@ logging.basicConfig(
 def get_mask_card_number(card_number: str) -> str:
     """Возвращает замаскированный номер карты"""
     logger.info("Начало работы приложения...")
+    if not card_number:
+        return "Нет данных карты"
     logger.info("Возвращаем замаскированный номер карты...")
     return f"{card_number[:4]} {card_number[4:6]}** **** {card_number[-4:]}"
 
 
-print(get_mask_card_number("7000792289606361"))
+#print(get_mask_card_number("7000792289606361"))
 
 
 def get_mask_account(account_number: str) -> str:
     """Возвращает замаскированный номер счета"""
+    if not account_number:
+        return "Нет данных счета"
     logger.info("Возвращаем замаскированный номер счета...")
     return f"**{account_number[-4:]}"
 
 
-print(get_mask_account("73654108430135874305"))
+#print(get_mask_account("73654108430135874305"))
 logger.info("Конец работы приложения...")
